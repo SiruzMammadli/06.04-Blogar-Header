@@ -1,0 +1,169 @@
+/* === Coded by DOLCHA === */
+
+
+// Google Font Links
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* -=-=- GENERAL -=-=- */
+
+* {
+    list-style: none;
+    outline: none;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    margin: 0;
+}
+
+/* -=-=- COLORS -=-=- */
+
+$white-clr: white;
+$menu-link: #878787;
+$blue-clr: #3858f6;
+$red-clr: #d93e40;
+$input-bg: #f0f2f5;
+$input-txt-clr: #65676b;
+$shadow-rgb: 0px 4px 10px rgba(37, 47, 63, 0.1);
+
+/* -=-=- HEADER STYLE -=-=- */
+
+#header {
+    width: 100%; height: 80px;
+    padding: 0 30px;
+    box-shadow: $shadow-rgb;
+    z-index: 100;
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        a {
+            display: block;
+
+            img {
+                height: 40px;
+            }
+        }
+    }
+
+    .navi-menu {
+        text-transform: capitalize;
+        font-size: 15px;
+        ul {
+
+            li {
+                margin: 0 12px;
+                line-height: 80px;
+                a {
+                    display: block;
+                    position: relative;
+                    color: $menu-link;
+                    font-weight: 500;
+                    transition: .3s;
+
+                    &:hover {
+                        color: $blue-clr;
+
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0; left: 0;
+                        width: 0;
+                        height: 4px;
+                        background-color: $blue-clr;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .search-area {
+            position: relative;
+            input {
+                max-width: 220px;
+                height: 35px;
+                padding: 0 20px 0 46px;
+                background-color: $input-bg;
+                color: $input-txt-clr;
+                border: 1px solid transparent;
+                border-radius: 44px;
+                font-size: 14px;
+                font-weight: 300;
+                transition: .3s;
+
+                &:focus {
+                    border-color: $blue-clr;
+                }
+            }
+            i {
+                position: absolute;
+                top: 50%; left: 18px;
+                transform: translateY(-45%);
+                font-size: 20px;
+                color: $input-txt-clr;
+            }
+        }
+        .cart {
+            margin-left: 5px;
+            position: relative;
+            a {
+                display: block;
+                width: 35px; height: 35px;
+                background-color: $input-bg;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 41px;
+                color: $input-txt-clr;
+                transition: .3s;
+
+                &:hover {
+                    background-color: $blue-clr;
+                    color: $white-clr;
+                }
+
+                i {
+                    font-size: 17px;
+                }
+            }
+            span {
+                position: absolute;
+                top: -5px; right: -2px;
+                width: 16px; height: 16px;
+                border-radius: 50%;
+                background-color: $blue-clr;
+                color: $white-clr;
+                font-size: 13px;
+                line-height: 18px;
+                text-align: center;
+                z-index: 2;
+            }
+        }
+    }
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+
+
+/* -=-=- RESPONSIVE STYLE -=-=- */
+
+@media (max-width: 1300px) {
+    
+}
